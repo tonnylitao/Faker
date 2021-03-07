@@ -8,7 +8,7 @@
 import Foundation
 import JavaScriptCore
 
-protocol FakerFunction {
+public protocol FakerFunction {
     var rawValue: String { get }
     
     var value: String { get }
@@ -48,7 +48,7 @@ public class Faker: NSObject {
 }
 
 
-extension Faker {
+public extension Faker {
     
     enum Address: String, CaseIterable, FakerFunction {
         case zipCode
