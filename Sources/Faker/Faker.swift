@@ -48,7 +48,7 @@ public class Faker: NSObject {
 }
 
 
-extension Faker {
+public extension Faker {
     
     enum Address: String, CaseIterable, FakerFunction {
         case zipCode
