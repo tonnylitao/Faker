@@ -14,7 +14,7 @@ public protocol FakerFunction {
     var value: String { get }
 }
 
-extension FakerFunction {
+public extension FakerFunction {
     
     var value: String {
         Faker.context.evaluateScript("\(name)()").toString()
@@ -48,7 +48,7 @@ public class Faker: NSObject {
 }
 
 
-public extension Faker {
+extension Faker {
     
     enum Address: String, CaseIterable, FakerFunction {
         case zipCode
