@@ -7,7 +7,6 @@
 
 import Foundation
 import JavaScriptCore
-//import class Foundation.Bundle
 
 protocol FakerFunction {
     var rawValue: String { get }
@@ -26,7 +25,7 @@ extension FakerFunction {
     }
 }
 
-class Faker: NSObject {
+public class Faker: NSObject {
     
     static var context: JSContext! = {
         let bundle = Bundle(for: Faker.self)
@@ -229,7 +228,7 @@ extension Faker {
 
 
 /*
-TODO faker return dictionary
+Not Support yet
 enum Helpers: String, CaseIterable, FakerFunction {
     case createCard
     case contextualCard
